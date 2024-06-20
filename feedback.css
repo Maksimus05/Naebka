@@ -1,0 +1,106 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Общие стили */
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    background-color: #33CCCC;
+  }
+  
+  /* Заголовок */
+  header {
+    background-color: #006363;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+  
+  p {
+    margin: 0 0 20px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  /* Основная часть */
+  main {
+    padding: 80px 20px;
+  }
+  
+  /* Блок с отзывами */
+  .reviews {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .review-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .review-text {
+    margin: 0;
+  }
+  
+  /* Подвал */
+  footer {
+    background-color: #006363;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }

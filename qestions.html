@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Часто задаваемые вопросы</title>
+  <link rel="stylesheet" href="qestions.css">
+  <link rel="icon" href="пп.png">
+</head>
+<body>
+  <header>
+    <a href="#" onclick="history.back();return false;" class="history-back">Вернуться назад</a>
+    <h1>Часто задаваемые вопросы</h1>
+  </header>
+
+  <main>
+    <section class="faq">
+      <h2>Часто задаваемые вопросы</h2>
+      <ul class="q-1">
+        <li>
+          <img src="arrow-circle-left-svgrepo-com.png" class="arrow" alt="">
+          <h3 class="ques" id="ques">Когда мне стоит приступить к обучению?</h3>
+          <p class="hidden ans" id="ans">Есть два лучших времени начать новую жизнь : первое - год назад, а второе - прямо сейчас. </p>
+        </li>
+        <li>
+          <img src="arrow-circle-left-svgrepo-com.png" class="arrow" alt="">
+          <h3 class="ques" id="ques">Как я могу начать?</h3>
+          <p class="hidden ans" id="ans">Вступай в нашу команду и скорей начинай зарабатвать миллионы.</p>
+        </li>
+        <li>
+          <img src="arrow-circle-left-svgrepo-com.png" class="arrow" alt="">
+          <h3 class="ques" id="ques">Сколько стоит курс?</h3>
+          <p class="hidden ans" id="ans">Наша информация бесценна,но именно для тебя мы сделали символическую сумму - 100000 р. , но если ты приобретешь курс прямо сейчас, то он обойдется тебе всего за 49999 р,а если ты приведешь 10 своих друзей , то курс станет для тебя совершенно бесплатным.</p>
+        </li>
+        <li>
+          <img src="arrow-circle-left-svgrepo-com.png" class="arrow" alt="">
+          <h3 class="ques" id="ques">Как долго длится курс?</h3>
+          <p class="hidden ans" id="ans">В зависимости от твоих базовых знаний финансовой грамотности, мы подберем для тебя оптимальную продолжительность курса и сосредоточимся на твоих слабых местах.</p>
+        </li>
+        <li>
+          <img src="arrow-circle-left-svgrepo-com.png" class="arrow" alt="">
+          <h3 class="ques" id="ques">Почему я должен вам довериться?</h3>
+          <p class="hidden ans" id="ans">Я никогда не прошу клиентов судить меня по успехам. Я прошу их судить меня по неудачам , а их у меня крайне мало.</p>
+        </li>
+        <li>
+          <img src="arrow-circle-left-svgrepo-com.png" class="arrow" alt="">
+          <h3 class="ques" id="ques">Можно ли совмещать обучение с основной работой/учебой?</h3>
+          <p class="hidden ans" id="ans">Конечно. Вся суть нашего курса в том, чтобы вы могли без отрыва от учебы/работы получить инструменты, которые изменят вашу жизнь. Любым из направлений вы можете начать заниматься в свободное время, а затем сделать их своей основной деятельностью, если захотите. Так делает 90% наших учеников.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Все права защищены
+  </footer>
+
+  <script>
+    // Находим все элементы h3 и p на странице
+    const headers = document.querySelectorAll('.ques');
+    const answers = document.querySelectorAll('.ans');
+    const arrows = document.querySelectorAll('.arrow');
+
+    // Добавляем обработчик события 'click' для каждого заголовка
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            // Найти соответствующий ответ
+            const answer = header.nextElementSibling;
+            const arrow = header.previousElementSibling;
+
+            // Проверка, является ли ответ видимым
+            const isVisible = answer.classList.contains('visible');
+
+            // Скрыть все ответы
+            answers.forEach(ans => {
+                ans.classList.add('hidden');
+                ans.classList.remove('visible');
+            });
+            arrows.forEach(arr => {
+                arr.classList.remove('rotated');
+                arr.classList.add('-rotated');
+            });
+
+            // Переключить видимость только для выбранного ответа
+            if (!isVisible) {
+                answer.classList.add('visible');
+                answer.classList.remove('hidden');
+                arrow.classList.add('rotated');
+            }
+        });
+    });
+  </script>
+</body>
+</html>

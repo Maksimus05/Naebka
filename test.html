@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тест: Готов ли ты стать миллионером?</title>
+  <link rel="stylesheet" href="test.css">
+  <link rel="icon" href="пп.png">
+  <script src="test.js"></script>
+</head>
+<body>
+  <header>
+    <a href="#" onclick="history.back();return false;" class="history-back">Вернуться назад</a>
+    <h1>Тест: Готов ли ты стать миллионером?</h1>
+  </header>
+
+  <main>
+    <section class="test">
+      <h2>Пройдите тест и узнайте, готовы ли вы к богатству!</h2>
+      <p>Этот тест поможет вам оценить свои навыки, знания и личные качества, необходимые для достижения финансового успеха.</p>
+      <form>
+        <ol>
+          <li>
+            <h3>Какой у вас главный источник дохода?</h3>
+            <input type="radio" name="income" value="salary" id="salary">
+            <label for="salary">Заработная плата</label><br>
+            <input type="radio" name="income" value="business" id="business">
+            <label for="business">Собственный бизнес</label><br>
+            <input type="radio" name="income" value="investment" id="investment">
+            <label for="investment">Инвестиции</label><br>
+          </li>
+          <li>
+            <h3>Какой у вас уровень сбережений?</h3>
+            <input type="radio" name="savings" value="low" id="low">
+            <label for="low">Низкий (менее 3 месяцев)</label><br>
+            <input type="radio" name="savings" value="medium" id="medium">
+            <label for="medium">Средний (3-6 месяцев)</label><br>
+            <input type="radio" name="savings" value="high" id="high">
+            <label for="high">Высокий (более 6 месяцев)</label><br>
+          </li>
+          <li>
+            <h3>Как вы относитесь к риску?</h3>
+            <input type="radio" name="risk" value="low" id="risk-low">
+            <label for="risk-low">Я избегаю риска</label><br>
+            <input type="radio" name="risk" value="medium" id="risk-medium">
+            <label for="risk-medium">Я готов к умеренному риску</label><br>
+            <input type="radio" name="risk" value="high" id="risk-high">
+            <label for="risk-high">Я готов к высокому риску</label><br>
+          </li>
+          <li>
+            <h3>Сколько времени вы готовы посвящать достижению своих финансовых целей?</h3>
+            <input type="radio" name="time" value="little" id="time-little">
+            <label for="time-little">Немного (менее 1 часа в день)</label><br>
+            <input type="radio" name="time" value="medium" id="time-medium">
+            <label for="time-medium">Средне (1-2 часа в день)</label><br>
+            <input type="radio" name="time" value="much" id="time-much">
+            <label for="time-much">Много (более 2 часов в день)</label><br>
+          </li>
+          <li>
+            <h3>Какую сумму вы хотели бы иметь в качестве капитала?</h3>
+            <input type="radio" name="goal" value="small" id="goal-small">
+            <label for="goal-small">Небольшая (до 1 млн рублей)</label><br>
+            <input type="radio" name="goal" value="medium" id="goal-medium">
+            <label for="goal-medium">Средняя (1-10 млн рублей)</label><br>
+            <input type="radio" name="goal" value="large" id="goal-large">
+            <label for="goal-large">Большая (более 10 млн рублей)</label><br>
+          </li>
+          <li>
+            <h3>Готовы ли вы брать на себя ответственность?</h3>
+            <input type="radio" name="penis" value="yes" id="goal-yes">
+            <label for="goal-yes">Да</label><br>
+            <input type="radio" name="penis" value="no" id="goal-no">
+            <label for="goal-no">Нет</label><br>
+          </li>
+          <li>
+            <h3>Сможете ли вы стать первым миллионером в своей семье?</h3>
+            <input type="radio" name="penis1" value="yes" id="goal-yes">
+            <label for="goal-yes">Да</label><br>
+            <input type="radio" name="penis1" value="no" id="goal-no">
+            <label for="goal-no">Нет</label><br>
+          </li>
+        </ol>
+        <input type="button" value="Ответить" onclick="showPopup()">
+      </form>
+      <div id="popup" class="hidden">
+        <div class="content"><h2>Поздравляем!</h2>
+          <p>Вы успешно прошли тест!</p>
+          <p>Вы потенциальный миллионер</p>
+          <button onclick="hidePopup()">Закрыть</button></div>
+        
+      </div>
+    </section>
+    <footer>
+      &copy; 2023
+  </main>

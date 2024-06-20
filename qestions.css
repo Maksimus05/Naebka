@@ -1,0 +1,134 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Общие стили */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  background-color: #33CCCC;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Заголовок */
+header {
+  background-color: #006363;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+a.history-back {
+  color:#ddd;
+}
+
+p {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 40px;
+  width: 600px;
+  text-align: justify;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Основная часть */
+main {
+  padding: 80px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Блок с FAQ */
+.faq {
+  background-color: #fff;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: max-content;
+}
+
+li {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+ 
+li img {
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px 40px;
+  cursor: pointer;
+}
+
+.faq p {
+  margin: 0;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.rotated {
+  transform: rotate(90deg);
+}
+
+h1 {
+  display: none;
+}
+/* Подвал */
+footer {
+  background-color: #006363;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}

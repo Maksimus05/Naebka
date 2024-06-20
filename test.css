@@ -1,0 +1,185 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Общие стили */
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.6;
+    background-color: #33CCCC;
+  }
+  
+  /* Заголовок */
+  header {
+    background-color: #009999;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+  
+  p {
+    margin: 0 0 20px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  /* Основная часть */
+  main {
+    padding: 80px 20px;
+  }
+  
+  /* Блок с тестом */
+  .test {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .test input {
+    margin-right: 10px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #009999;
+    border: none;
+    border-radius: 10px;
+  }
+  .test input:hover{
+    background-color: #006363;
+  }
+  
+  /* Подвал */
+  footer {
+    background-color: #009999;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+ /* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Всплывающее окно */
+  #popup {
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Содержимое всплывающего окна */
+  #popup .content {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    margin: 10% auto;
+    border-radius: 10px;
+  }
+  
+  #popup h2 {
+    font-size: 24px;
+    margin: 0 auto;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  #popup p {
+    margin: 40 auto;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  #popup button {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 20px;
+    background-color: #009999;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  button{
+    cursor: pointer;
+  }
+  #popup button:hover {
+    background-color:  #006363;
+  }
+  
+  /* Анимация */
+  @keyframes showPopup {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #popup.show {
+    animation: showPopup 0.5s ease-in-out;
+  }
+  

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="registration.css">
+<script src="test.js"></script>
+<link rel="icon" href="пп.png">
+</head>
+<body>
+  <header>
+    <a href="#" onclick="history.back();return false;" class="history-back">Вернуться назад</a>
+  </header>
+  <main>
+    <section class="reg">
+      <form id="registrationForm">
+        <h2>Форма регистрации</h2>
+        
+        <input type="text" placeholder="Номер карты" id="login" oninput="validateCreditCardNumber(this)" name="login" maxlength="16" require><br><br>
+        <script>
+          function validateCreditCardNumber(input) {
+              input.value = input.value.replace(/\D/g, ''); // Удаляем все нечисловые символы
+              if (input.value.length > 16) {
+                  input.value = input.value.slice(0, 16); // Обрезаем до 16 символов
+              }
+          }
+      </script>
+  
+        
+        <input type="text" placeholder="Имя владельца" id="password" oninput="capitalizeFirstLetter(this)" name="password"><br><br>
+        
+        <script>
+          function capitalizeFirstLetter(input) {
+              let words = input.value.split(' ');
+              for (let i = 0; i < words.length; i++) {
+                  if (/^[a-zA-Z]+$/.test(words[i])) {
+                      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+                  } else {
+                      words[i] = ''; // Очищаем слово, если оно содержит русские буквы
+                  }
+              }
+              input.value = words.join(' ');
+          }
+      </script>
+
+        
+        <input type="text" placeholder="Действительна до" id="dateInput" oninput="formatDateInput(this)" name="password"><br><br>
+
+        <script>
+          function formatDateInput(input) {
+            // Удаляем все символы, кроме цифр
+            var cleaned = ('' + input.value).replace(/\D/g, '');
+            
+            // Добавляем знак "/" после второй введенной цифры
+            if (cleaned.length > 2) {
+              cleaned = cleaned.substring(0, 2) + '/' + cleaned.substring(2);
+            }
+            
+            // Обрезаем ввод до 4 цифр
+            if (cleaned.length > 5) {
+              cleaned = cleaned.substring(0, 5);
+            }
+          
+            // Перезаписываем значение в input
+            input.value = cleaned;
+          }
+          </script>
+          
+
+        
+        <input type="text" placeholder="CVV" id="numberInput" maxlength="3" oninput="restrictInput(this)" name="password"><br><br>
+        
+        <script>
+          function restrictInput(input) {
+              let value = input.value;
+              
+              if (value.length > 3) {
+                  input.value = value.slice(0, 3);
+              }
+          }
+          </script>
+
+        <input type="button" value="Зарегистрироваться" onclick="showPopup()">
+      </form>
+      <div id="popup" class="hidden">
+        <div class="content"><h3>Поздравляем!</h3>
+          <p>Регистрация прошла успешно!</p>
+          <button onclick="hidePopup()">Закрыть</button></div>
+      </div>
+  </section>
+  </main>
+</body>
+</html>
